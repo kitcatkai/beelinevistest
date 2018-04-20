@@ -4,7 +4,7 @@
 // avoid destructuring for older Node version support
 
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+
 
 module.exports = {
   entry: './app.js',
@@ -35,10 +35,6 @@ module.exports = {
       'mapbox-gl$': resolve('./node_modules/mapbox-gl/dist/mapbox-gl.js')
     }
   },
-
-  plugins: [
-    new webpack.EnvironmentPlugin(['MapboxAccessToken'])
-  ],
 
   resolve: {
     extensions: ['', '.js', '.jsx']

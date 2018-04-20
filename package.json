@@ -1,8 +1,4 @@
 {  
-  "engines": {
-    "node": "7.0.0",
-    "npm": "3.10.8"
-  },
   "scripts": {
     "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "dev": "webpack-dev-server",

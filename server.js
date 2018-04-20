@@ -10,5 +10,7 @@ app.set('port', process.env.PORT || 8080);
 //   console.log('listening on port ', server.address().port);
 // });
 
+console.log('listening to port', process.env.PORT);
+console.log('getting port', app.get('port'));
 app.listen(process.env.PORT || 8080);
 

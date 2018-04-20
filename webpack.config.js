@@ -3,14 +3,15 @@
 
 // avoid destructuring for older Node version support
 
+const resolve = require('path').resolve;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path')
 
-module.exports = {
-  entry: './app.js',
+const CONFIG = {
+  entry: resolve('./app.js'),
 
   output: {
-    path: './dist',
+    path: resolve("./dist"),
     filename: 'bundle.js'
   },
 
@@ -36,9 +37,9 @@ module.exports = {
     }
   },
 
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  }
+  // resolve: {
+  //   extensions: ['', '.js', '.jsx']
+  // }
 };
 
 // This line enables bundling against src in this repo rather than installed deck.gl module

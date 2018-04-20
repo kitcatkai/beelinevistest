@@ -4,7 +4,7 @@
 // avoid destructuring for older Node version support
 
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-
+var path = require('path')
 
 module.exports = {
   entry: './app.js',

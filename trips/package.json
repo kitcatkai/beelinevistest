@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack --watch --inline",
+    "build": "./node_modules/.bin/webpack --config=webpack.build.config.js",
+  },
+  "dependencies": {
+    "d3-request": "^1.0.5",
+    "deck.gl": "^4.1.0",
+    "luma.gl": "^4.0.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-map-gl": "^3.0.0",
+    "@tweenjs/tween.js": "^17.2.0"
+  },
+  "devDependencies": {
+    "buble-loader": "^0.4.0",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
+  }
+}

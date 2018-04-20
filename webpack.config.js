@@ -2,12 +2,16 @@
 // delete the local development overrides at the bottom of this file
 
 // avoid destructuring for older Node version support
-const resolve = require('path').resolve;
+
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
-const CONFIG = {
-  entry: {
-    app: resolve('./app.js')
+module.exports = {
+  entry: './app.js',
+
+  output: {
+    path: './dist',
+    filename: 'bundle.js'
   },
 
   devtool: 'source-map',
@@ -32,11 +36,15 @@ const CONFIG = {
     }
   },
 
-  // Optional: Enables reading mapbox token from environment variable
   plugins: [
     new webpack.EnvironmentPlugin(['MapboxAccessToken'])
-  ]
+  ],
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  }
 };
 
 // This line enables bundling against src in this repo rather than installed deck.gl module
 module.exports = env => env ? require('../webpack.config.local')(CONFIG)(env) : CONFIG;
+

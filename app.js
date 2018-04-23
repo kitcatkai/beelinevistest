@@ -26,7 +26,7 @@ class Root extends Component {
       },
       buildings: null,
       trips: null,
-      time: 0
+      time: 2439
     };
 
     // requestJson(DATA_URL.BUILDINGS, (error, response) => {

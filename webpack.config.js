@@ -11,7 +11,8 @@ const CONFIG = {
   entry: resolve('./app.js'),
 
   output: {
-    path: resolve("./dist"),
+    path: __dirname,
+    publicPath: '/',
     filename: 'bundle.js'
   },
 
@@ -40,6 +41,7 @@ const CONFIG = {
   // resolve: {
   //   extensions: ['', '.js', '.jsx']
   // }
+
 };
 
 // This line enables bundling against src in this repo rather than installed deck.gl module
